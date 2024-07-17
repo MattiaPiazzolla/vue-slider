@@ -1,3 +1,15 @@
+const { createApp } = Vue;
+// CREO L'APP
+createApp({
+    data(){
+        return{
+
+        }
+    },
+    methods: {
+        
+    },
+}).mount('#app');
 
 const slides = [
 {
