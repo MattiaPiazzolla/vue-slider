@@ -34,7 +34,7 @@
                     <!-- AGGIUNGO IL METODO CLICK -->
                     <div class="next" @click="nextSlide()"></div>
                     <!-- AGGIUNGO I THUMBNAILS CON UN v-for -->
-                    <div class="thumb" v-for="(item, index) in slides">
+                    <div class="thumb" v-for="(item, index) in slides" :class="active_slide === index ? 'active' : ''">
                          <img :src="item.image" :alt="item.title" >
                     </div>
                     <!-- <div class="thumb active">
