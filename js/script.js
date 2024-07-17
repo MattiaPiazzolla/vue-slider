@@ -32,6 +32,17 @@ createApp({
         };
     },
     methods: {
+        // AGGIUNGO IL METODO PER GESTIRA IL PULSANTE NEXT
+        nextSlide(){
+            // VERIFICO CHE LA POSIZIONE DELLE SLIDE NON VADA MAI OLTRE LA LUNGHEZZA DELL'ARRAI CHE LE COSTITUISCE
+            if (this.active_slide == this.slides.length -1) {
+                // DISOC ALL'APP DI RINIZIARE DA ZERO
+                this.active_slide = 0;
+            } else {
+                // ALTRIMENTI GLI DICO DI ANDARE AVANTI 
+                this.active_slide++;
+            }
+        }
         
     },
 }).mount('#app');
