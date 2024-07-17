@@ -14,7 +14,7 @@ SCOMPOSIZIONE PROBLEMA
 >Creo l'app vue
     >>inserisco as suo interno l'array di oggetti che ci è stato fornito
 >Definisco la destinazione delle informazioni nel dom 
-    >>Definisoc active image e le attribuisco 0
+    >>Definisco active image e le attribuisco 0
     >>metto a vista gli elementi attivi nel dom 
 >Attribuisco le funzionalità ai pulsanti next e prev con dei metodi vue
 >utilizzo v-for per aggiungere i thumbnails 

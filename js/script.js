@@ -3,6 +3,8 @@ const { createApp } = Vue;
 createApp({
     data(){
         return{
+            // INIZIALIZZO LA SLIDE ATTIVA
+            active_slide:0,
             slides: [
                 {
                     image: 'img/01.webp',
