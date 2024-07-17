@@ -42,6 +42,17 @@ createApp({
                 // ALTRIMENTI GLI DICO DI ANDARE AVANTI 
                 this.active_slide++;
             }
+        },
+        // AGGIUNGO IL METODO PER GESTIRA IL PULSANTE PREV
+        prevSlide(){
+            // VERIFICO CHE LA POSIZIONE DELLE SLIDE NON VADA MAI A MENO DI 0
+            if (this.active_slide == 0) {
+                // DISOC ALL'APP DI RINIZIARE DAL'ULTIMO ELEMENTO DELL'ARRAY
+                this.active_slide = this.slides.length -1;
+            } else {
+                // ALTRIMENTI GLI DICO DI TORNARE INDIETOR
+                this.active_slide--;
+            }
         }
         
     },
