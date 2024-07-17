@@ -29,7 +29,13 @@ createApp({
             ],
             // DEFINISCO LA SLIDE ATTIVA
             active_slide: 0,
+            // INIZIALIZZO L'AUTOSCROLL
+            scroll : null,
         };
+    },
+    // DICO ALL'APPLICAZIONE DI FAR PARTIRE QUESTO METODO CON IL CARICAMENTO DELLA PAGINA
+    created() {
+        this.autoscroll();
     },
     methods: {
         // AGGIUNGO IL METODO PER GESTIRA IL PULSANTE NEXT
@@ -57,8 +63,16 @@ createApp({
         // AGGIUNGO IL METODO PER CAMBIARE L'ELEMENTO SELEZIONATO IN BASE AL CLICK 
         clickedSlide(index){
             this.active_slide = index;
+        },
+        // DEFINISCO IL METODO PER FAR SCORRERE LE IMMAGINI
+        autoscroll() {
+            this.scroll = setInterval(() => {
+                this.nextSlide();
+            }, 3000);
+        },
+        // DEFINISCO LA FUNZIONE CHE INTERROMPE L'AUTOSCROLL
+        stopAutoscroll(){
+            clearInterval(this.scroll);
         }
-        
-    },
+        }
 }).mount('#app');
-

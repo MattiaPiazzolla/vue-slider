@@ -16,11 +16,12 @@
         <div class="container">
             <div class="slider-wrapper" tabindex="0">
 
-                <div class="item">
+                <div class="item" @mouseover="stopAutoscroll()" @mouseleave="autoscroll()">
                     <!-- INSERISCO GLI ELEMENTI IN VISTA -->
                      <!-- IMMAGINE -->
+                      <!-- AGGIUNGO LA FUNZIONALITA DI STOP E START SCROLLING IN BASE ALL'HOVER DEL MOUSE -->
                     <img :src="slides[active_slide].image" :alt="slides.title" />
-                    <div class="text">
+                    <div class="text" >
                         <!-- TITOLO -->
                         <h3> {{slides[active_slide].title}} </h3>
                         <!-- TESTO -->
