@@ -17,9 +17,13 @@
             <div class="slider-wrapper" tabindex="0">
 
                 <div class="item">
-                    <img src="img/01.webp" alt="Spiderman" />
+                    <!-- INSERISCO GLI ELEMENTI IN VISTA -->
+                     <!-- IMMAGINE -->
+                    <img :src="slides[active_slide].image" :alt="slides.title" />
                     <div class="text">
+                        <!-- TITOLO -->
                         <h3>Spiderman</h3>
+                        <!-- TESTO -->
                         <p>
                             Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et temporibus voluptatum suscipit
                             tempore aliquid deleniti aut
