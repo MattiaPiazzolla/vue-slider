@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Slider BONUS</title>
+    <link rel="stylesheet" href="./css/style.css" />
+</head>
+
+<body>
+
+    <div id="app">
+
+        <div class="container">
+            <div class="slider-wrapper" tabindex="0">
+
+                <div class="item">
+                    <!-- INSERISCO GLI ELEMENTI IN VISTA -->
+                     <!-- IMMAGINE -->
+                    <img :src="slides[active_slide].image" :alt="slides.title" />
+                    <div class="text">
+                        <!-- TITOLO -->
+                        <h3> {{slides[active_slide].title}} </h3>
+                        <!-- TESTO -->
+                        <p> {{slides[active_slide].text}} </p>
+                    </div>
+                </div>
+
+                <div class="thumbs">
+                     <!-- AGGIUNGO IL METODO CLICK -->
+                    <div class="prev" @click="prevSlide()"></div>
+                    <!-- AGGIUNGO IL METODO CLICK -->
+                    <div class="next" @click="nextSlide()"></div>
+                    <!-- AGGIUNGO I THUMBNAILS CON UN v-for -->
+                     <!-- AGGIUNGO LA CLASSE ACTIVE AL VERIFICARSI DELLE CONDIZIONI -->
+                      <!-- AGGIUNGO IL METODO CLICK PER CAMBIARE IL VALORE DI ACTIVE SLIDE CON QUELLO DELL'INDEX DELL'IMMAGINE CLICCATA -->
+                    <div class="thumb" v-for="(item, index) in slides" :class="active_slide === index ? 'active' : ''" @click="clickedSlide(index)">
+                         <img :src="item.image" :alt="item.title" >
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+    <script src='https://unpkg.com/vue@3/dist/vue.global.js'></script>
+    <script src="./js/script.js"></script>
+</body>
+
+</html>
